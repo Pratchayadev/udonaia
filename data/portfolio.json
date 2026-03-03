@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1",
+    "title": { "th": "กิจกรรม AIA", "en": "AIA Activity", "lo": "ກິດຈະກຳ AIA" },
+    "imageUrl": "https://img2.pic.in.th/539364932_1285627116686835_4296408308874016059_n-1758298676_library.jpg"
+  },
+  {
+    "id": "2",
+    "title": { "th": "งานประกัน AIA", "en": "AIA Insurance", "lo": "ປະກັນໄພ AIA" },
+    "imageUrl": "https://img5.pic.in.th/file/secure-sv1/569000000310001.webp"
+  },
+  {
+    "id": "3",
+    "title": { "th": "ผลงานลูกค้า", "en": "Customer Work", "lo": "ຜົນງານລູກຄ້າ" },
+    "imageUrl": "https://img2.pic.in.th/images0338f61c2b68ae85.jpeg"
+  },
+  {
+    "id": "4",
+    "title": { "th": "ตัวแทน AIA", "en": "AIA FA", "lo": "ຕົວແທນ AIA" },
+    "imageUrl": "https://img5.pic.in.th/file/secure-sv1/AIA-FA-1.jpg"
+  }
+]

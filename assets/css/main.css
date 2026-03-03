@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* AIA theme: white + red (like logo) */
+  --color-aia-red: #e4002b;
+  --color-aia-red-dark: #c41e3a;
+  --color-aia-red-light: #ff4d6a;
+  --color-trust: #e4002b;
+  --color-trust-light: #c41e3a;
+  --color-clean: #ffffff;
+  --color-modern: #fafafa;
+  --color-text: #1e293b;
+  --color-text-muted: #64748b;
+  --color-accent: #e4002b;
+  --font-thai: 'IBM Plex Sans Thai', sans-serif;
+  --font-sans: 'Inter', var(--font-thai);
+}
+
+/* Dark mode: override variables when .dark is on html */
+html.dark {
+  --color-clean: #0f172a;
+  --color-modern: #1e293b;
+  --color-text: #f1f5f9;
+  --color-text-muted: #94a3b8;
+}
+
+/* Dark mode: ให้ทุกหน้าที่ใช้ class เหล่านี้แสดงผลโทนมืดโดยอัตโนมัติ */
+html.dark .bg-white {
+  background-color: var(--color-modern);
+}
+html.dark .border-slate-200 {
+  border-color: rgb(51 65 85);
+}
+html.dark .text-slate-600 {
+  color: var(--color-text-muted);
+}
+html.dark .text-slate-700 {
+  color: var(--color-text);
+}
+html.dark .text-slate-500 {
+  color: var(--color-text-muted);
+}
+html.dark .bg-slate-50 {
+  background-color: rgb(30 41 59);
+}
+html.dark .bg-slate-100 {
+  background-color: rgb(51 65 85);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+body {
+  font-family: var(--font-thai);
+  color: var(--color-text);
+  background: var(--color-clean);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  overflow-x: hidden;
+  max-width: 100vw;
+  position: relative;
+}
+
+/* บังคับไม่ให้เนื้อหาทะลุขอบจอ */
+#__nuxt,
+#__layout {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* ปุ่ม/ลิงก์กดง่ายบนมือถือ (min 44px) */
+@media (max-width: 767px) {
+  .btn-primary,
+  .btn-secondary {
+    min-height: 44px;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
+.font-en {
+  font-family: var(--font-sans);
+}
+
+/* RTL / Lao if needed */
+[lang="lo"] body {
+  font-family: var(--font-thai);
+}
+
+@layer components {
+  .container-narrow {
+    @apply mx-auto w-full max-w-4xl px-4 sm:px-6;
+    min-width: 0;
+  }
+  .container-wide {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
+    min-width: 0;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-xl bg-[var(--color-aia-red)] px-6 py-3.5 font-semibold text-white shadow-lg transition hover:bg-[var(--color-aia-red-dark)] focus:outline-none focus:ring-2 focus:ring-[var(--color-aia-red)] focus:ring-offset-2;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-xl border-2 border-[var(--color-aia-red)] bg-transparent px-6 py-3.5 font-semibold text-[var(--color-aia-red)] transition hover:bg-[var(--color-aia-red)] hover:text-white focus:outline-none focus:ring-2 focus:ring-[var(--color-aia-red)] focus:ring-offset-2;
+  }
+  .text-aia {
+    color: var(--color-aia-red);
+  }
+  .bg-aia-subtle {
+    background-color: rgba(228, 0, 43, 0.06);
+  }
+  .section-pad {
+    @apply py-14 sm:py-16 md:py-20;
+  }
+  .heading-hero {
+    @apply text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-5xl;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  .heading-section {
+    @apply text-2xl font-bold sm:text-3xl;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Page transition */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.page-enter-from {
+  opacity: 0;
+  transform: translateY(6px);
+}
+.page-enter-to {
+  opacity: 1;
+  transform: translateY(0);
+}
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(-4px);
+}
+
+/* Scroll-triggered (ใช้ .animate-on-scroll) - เนื้อหาแสดงปกติ ถ้า observer เพิ่ม .is-visible จะมี transition */
+.animate-on-scroll {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays for sections */
+.animate-delay-1 { transition-delay: 0.1s; }
+.animate-delay-2 { transition-delay: 0.2s; }
+.animate-delay-3 { transition-delay: 0.3s; }
+.animate-delay-4 { transition-delay: 0.4s; }
+.animate-delay-5 { transition-delay: 0.5s; }
+
+/* ปุ่มเมนูมือถือ: ให้กดได้และไม่ถูกตัด */
+.header-menu-btn {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  z-index: 10;
+}
+
+/* Mobile drawer */
+.mobile-drawer {
+  isolation: isolate;
+}

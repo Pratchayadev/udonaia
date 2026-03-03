@@ -1,0 +1,156 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "articles": "Articles",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "consult": "Free Quote"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "metaDesc": "Portfolio and activities of AIA insurance advisor Pornpavee Sripimso, Northeast Thailand"
+  },
+  "theme": {
+    "label": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode"
+  },
+  "hero": {
+    "headline": "Insurance plans that fit your life — not oversold",
+    "subheadline": "Free quote in minutes with straightforward advice",
+    "cta": "Get Free Quote"
+  },
+  "pain": {
+    "title": "Why do so many end up paying a fortune without warning?",
+    "point1": "ICU costs 30,000 – 100,000 THB per night",
+    "point2": "Cancer treatment can run into millions",
+    "point3": "Savings can run out in months",
+    "close": "The right insurance protects your family’s future",
+    "cta": "Get Free Advice"
+  },
+  "solution": {
+    "title": "How can I help you?",
+    "item1": "Personal risk analysis",
+    "item2": "Budget-appropriate planning",
+    "item3": "Easy-to-understand plan comparison",
+    "item4": "Support through the whole claims process",
+    "cta": "Free consultation, no obligation"
+  },
+  "socialProof": {
+    "title": "What our clients say",
+    "review1": "Hospital bill 180,000 THB — I paid 0",
+    "review2": "Clear explanation, no pressure to buy",
+    "review3": "Quick Line replies, great follow-up"
+  },
+  "leadForm": {
+    "title": "Get free advice within 5 minutes",
+    "name": "Name",
+    "age": "Age",
+    "job": "Occupation",
+    "phone": "Phone",
+    "lineId": "Line ID",
+    "cta": "Get Free Advice",
+    "privacy": "Your information is kept 100% confidential"
+  },
+  "about": {
+    "title": "About your advisor",
+    "agentName": "Pornpavee Sripimso",
+    "role": "AIA Insurance Advisor",
+    "license": "License number",
+    "experience": "Experience",
+    "philosophy": "I don’t sell to everyone — I recommend plans that truly fit you"
+  },
+  "services": {
+    "title": "Our services",
+    "health": {
+      "title": "Health insurance",
+      "desc": "Sum insured, high coverage, suitable for all ages",
+      "cta": "Get health quote"
+    },
+    "life": {
+      "title": "Life insurance",
+      "desc": "Family protection, debt coverage, income security",
+      "cta": "Plan for family"
+    },
+    "tax": {
+      "title": "Tax-deductible insurance",
+      "desc": "Maximum tax relief with life coverage",
+      "cta": "Free tax calculation"
+    },
+    "child": {
+      "title": "Child insurance",
+      "desc": "Protect your child from today for a secure future",
+      "cta": "Free child plan"
+    }
+  },
+  "contact": {
+    "title": "Contact us",
+    "message": "Reach out for a free consultation — no charge",
+    "phone": "Phone",
+    "line": "Line",
+    "facebook": "Facebook"
+  },
+  "faq": {
+    "title": "FAQ",
+    "q1": "Do I have to buy right away?",
+    "a1": "No. The decision is entirely yours",
+    "q2": "Is the consultation really free?",
+    "a2": "Yes. No cost",
+    "q3": "What if I don’t buy?",
+    "a3": "No obligation at all"
+  },
+  "footer": {
+    "agent": "Pornpavee Sripimso",
+    "tagline": "AIA Insurance Advisor — Plans that fit your life",
+    "rights": "All rights reserved"
+  },
+  "seo": {
+    "defaultTitle": "Pornpavee Sripimso | AIA Insurance Advisor — Northeast Thailand, Udon Thani, Khon Kaen, Nong Khai, Laos",
+    "defaultDescription": "AIA Insurance Advisor for Northeast Thailand: Udon Thani, Khon Kaen, Nong Khai, Nong Bua, Loei, Sakon Nakhon & Laos. Life & health insurance, free quote, no overselling."
+  },
+  "articles": {
+    "listTitle": "Articles",
+    "backToArticles": "Back to articles",
+    "ctaCheckQuote": "Get free quote",
+    "healthSum": {
+      "title": "What is sum-insured health insurance? Do you need it in 2026?",
+      "metaDesc": "What is sum-insured health insurance, how it differs from itemized plans, and whether it’s worth it in 2026, with real cost examples and tips before you decide.",
+      "s1Title": "What is sum-insured health insurance?",
+      "s1Body": "Sum-insured health insurance is a plan with an \"annual total coverage limit\" instead of separate limits for room, surgery, and medicine. Example: 5,000,000 THB per year can be used for any treatment within the policy terms.",
+      "s2Title": "How is it different from itemized plans?",
+      "s2Body": "Itemized: e.g. room 3,000 THB/day, surgery 100,000 THB, with a cap per category. Sum-insured: you use one total limit more flexibly and don’t worry if one category runs out.",
+      "s3Title": "Is it still relevant in 2026?",
+      "s3Body": "In short, \"more necessary.\" Reasons: 1) Medical costs rise every year 2) Critical illness rates are rising 3) Six-figure bills at private hospitals are normal. Examples: appendectomy 80,000–150,000 THB, cancer can run into millions.",
+      "s4Title": "Who is it for?",
+      "s4Body": "Salaried employees with debt, business owners who can’t afford to stop earning, families, and anyone who wants long-term security.",
+      "s5Title": "What budget should you plan for?",
+      "s5Body": "Generally 1,500–4,000 THB per month, depending on age and coverage amount.",
+      "s6Title": "Summary: should you get it?",
+      "s6Body": "If you have large savings and can take the risk, it may not be essential. But if a six-figure medical bill would affect your life, sum-insured health insurance is a key risk-management tool.",
+      "s7Title": "Free consultation",
+      "s7Body": "If you want to see if it’s right for you, you can get free advice at no cost."
+    },
+    "highConverting": {
+      "title": "High-converting landing page for AIA insurance",
+      "metaDesc": "Landing page structure designed to convert leads and build trust for insurance campaigns.",
+      "s1Title": "Hero section",
+      "s1Body": "Headline: Insurance that \"fits your life\" — not just easy to sell. Subheadline: Free quote in 1 minute, straightforward advice, no pressure. CTA: Get free quote now.",
+      "s2Title": "Pain point (Are you ready?)",
+      "s2Body": "What if tomorrow you had to pay 200,000 THB for treatment? ICU 30,000–100,000 THB per night, major surgery in the hundreds of thousands to millions, critical illness can stop your income. Many have savings, but savings aren’t meant for \"long-term illness.\" Well-planned insurance protects your savings.",
+      "s3Title": "Shift belief (I don’t sell to everyone)",
+      "s3Body": "What I do: analyze income, assess debt, review health risk, recommend only suitable plans. If it’s not right, I’ll say \"you don’t need it yet.\"",
+      "s4Title": "Social proof (Real cases)",
+      "s4Body": "Case 1: Client 34, emergency hospital stay, bill 187,450 THB, out of pocket 0. Case 2: Business owner, ill and off work 3 months, still received income replacement every month. The difference isn’t luck — it’s planning ahead.",
+      "s5Title": "Offer stack (What you get from free consultation)",
+      "s5Body": "Personal risk analysis, suitable budget calculation, easy plan comparison, no obligation. Takes only 10–15 minutes.",
+      "s6Title": "Lead capture & FAQ",
+      "s6Body": "Get advice within 5 minutes — name, age, job, income, phone, Line ID. FAQ: Must I buy now? No. Really free? Yes. What if I don’t? No obligation.",
+      "s7Title": "Final close",
+      "s7Body": "No insurance may not be a problem until the day it becomes a big one. Don’t wait for events to force your decision — CTA: Get free quote now."
+    }
+  }
+}
