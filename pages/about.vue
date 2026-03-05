@@ -4,13 +4,13 @@
       <h1 class="heading-section mb-8 text-[var(--color-aia-red)]">
         {{ t('about.title') }}
       </h1>
-      <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+      <div class="overflow-hidden rounded-2xl bg-white shadow-sm">
         <div class="flex flex-col sm:flex-row sm:items-start">
-          <div class="flex justify-center bg-slate-50 p-6 sm:w-56 sm:flex-shrink-0 sm:flex-col sm:items-center">
+          <div class="flex justify-center bg-slate-50 p-6 sm:w-72 sm:flex-shrink-0 sm:flex-col sm:items-center">
             <img
               :src="agentImg"
               :alt="t('about.agentName')"
-              class="h-44 w-44 rounded-xl object-cover object-top shadow-md ring-2 ring-[var(--color-aia-red)]/20 sm:h-52 sm:w-52"
+              class="h-52 w-52 rounded-xl object-cover object-top shadow-md sm:h-64 sm:w-64 md:h-72 md:w-72"
             />
           </div>
           <div class="space-y-6 p-6 sm:p-8">
@@ -45,7 +45,7 @@
 </template>
 
 <script setup lang="ts">
-import agentImg from '~/assets/img/pngtree-happy-corporate-business-professional-one-man-clipart-white-background-png-image_10329231.png'
+import agentImg from '~/assets/img/profile.png'
 import logoAia from '~/assets/img/logoaianobg.png'
 const { t } = useI18n()
 const localePath = useLocalePath()

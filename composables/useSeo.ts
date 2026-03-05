@@ -56,7 +56,7 @@ export function useSeo(options: {
     twitterImage: () => ogImage || undefined,
   })
 
-  // JSON-LD: LocalBusiness + Insurance / FinancialService for target areas
+  // JSON-LD: InsuranceAgency (LocalBusiness) with address & geo for Local SEO
   const areaServed = [
     'อุดรธานี',
     'ขอนแก่น',
@@ -64,6 +64,8 @@ export function useSeo(options: {
     'หนองบัวลำภู',
     'เลย',
     'สกลนคร',
+    'บึงกาฬ',
+    'นครราชสีมา',
     'ภาคอีสาน',
     'ประเทศไทย',
     'ลาว',
@@ -71,10 +73,9 @@ export function useSeo(options: {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'InsuranceAgency',
-    name: 'พรปวีณ์ ศรีพิมพ์สอ ตัวแทนประกัน AIA',
+    name: 'พรปวีณ์ ศรีพิมพ์สอ ตัวแทนประกัน AIA อุดรธานี',
     description: description,
-    url: canonical,
-    areaServed: areaServed.map((name) => ({ '@type': 'Place', name })),
+    url: baseUrl || canonical,
     image: ogImage || undefined,
     priceRange: '฿฿',
     slogan: 'วางแผนประกันอย่างเข้าใจ ไม่ขายเกินความจำเป็น',
@@ -83,8 +84,21 @@ export function useSeo(options: {
       'ประกันสุขภาพ',
       'ประกันอุบัติเหตุ',
       'วางแผนการเงิน',
+      'ลดหย่อนภาษี',
       'AIA',
     ],
+    areaServed: areaServed.map((name) => ({ '@type': 'Place', name })),
+    address: {
+      '@type': 'PostalAddress',
+      addressRegion: 'อุดรธานี',
+      addressLocality: 'อุดรธานี',
+      addressCountry: 'TH',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 17.4152,
+      longitude: 102.785,
+    },
   }
 
   useHead({

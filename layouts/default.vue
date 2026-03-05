@@ -196,6 +196,13 @@
           <p class="font-semibold text-[var(--color-aia-red)]">{{ t('footer.agent') }}</p>
         </div>
         <p class="mt-1 text-sm text-slate-600 dark:text-slate-400">{{ t('footer.tagline') }}</p>
+        <p class="mt-4 flex flex-wrap items-center gap-x-1 text-xs text-slate-500 dark:text-slate-500">
+          <span class="font-medium text-slate-600 dark:text-slate-400">{{ t('area.navLabel') }}:</span>
+          <template v-for="(a, i) in areaSlugs" :key="a.slug">
+            <NuxtLink :to="localePath(`/area/${a.slug}`)" class="text-[var(--color-aia-red)] hover:underline">{{ locale === 'th' ? a.nameTh : a.nameEn }}</NuxtLink>
+            <span v-if="i < areaSlugs.length - 1"> · </span>
+          </template>
+        </p>
         <p class="mt-6 text-xs text-slate-500 dark:text-slate-500">© {{ new Date().getFullYear() }} {{ t('footer.rights') }}</p>
       </div>
     </footer>
@@ -209,6 +216,17 @@ const { t, locale, setLocale } = useI18n()
 const localePath = useLocalePath()
 const switchLocalePath = useSwitchLocalePath()
 const { isDark, setTheme, init: initTheme } = useTheme()
+
+const areaSlugs = [
+  { slug: 'udon-thani', nameTh: 'อุดรธานี', nameEn: 'Udon Thani' },
+  { slug: 'khon-kaen', nameTh: 'ขอนแก่น', nameEn: 'Khon Kaen' },
+  { slug: 'nong-khai', nameTh: 'หนองคาย', nameEn: 'Nong Khai' },
+  { slug: 'nong-bua-lamphu', nameTh: 'หนองบัวลำภู', nameEn: 'Nong Bua Lamphu' },
+  { slug: 'loei', nameTh: 'เลย', nameEn: 'Loei' },
+  { slug: 'sakon-nakhon', nameTh: 'สกลนคร', nameEn: 'Sakon Nakhon' },
+  { slug: 'bueng-kan', nameTh: 'บึงกาฬ', nameEn: 'Bueng Kan' },
+  { slug: 'nakhon-ratchasima', nameTh: 'โคราช', nameEn: 'Korat' }
+]
 
 onMounted(() => {
   initTheme()
@@ -251,6 +269,7 @@ function isActive (to: string) {
   const target = to === '/' ? (localePrefix || '/') : `${localePrefix}${to}`
   if (to === '/articles') return path === target || path.startsWith(target + '/')
   if (to === '/portfolio') return path === target || path.startsWith(target + '/')
+  if (to.startsWith('/area')) return path === target || path.startsWith(target + '/')
   return path === target
 }
 

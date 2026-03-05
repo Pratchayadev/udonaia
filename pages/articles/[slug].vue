@@ -48,7 +48,17 @@ const slug = computed(() => route.params.slug as string)
 const articleKey = computed(() => {
   const map: Record<string, string> = {
     'health-sum': 'healthSum',
-    'high-converting': 'highConverting'
+    'high-converting': 'highConverting',
+    'agent-udon-5-reasons': 'agentUdon5Reasons',
+    'hospital-aia-kk-korat': 'hospitalAiaKkKorat',
+    'delivery-20-provinces': 'delivery20Provinces',
+    'review-aia-health-happy': 'reviewAiaHealthHappy',
+    'compare-savings-pension': 'compareSavingsPension',
+    'newbie-3-steps': 'newbie3Steps',
+    'claim-nongkhai-buengkan': 'claimNongkhaiBuengkan',
+    'insure-while-healthy': 'insureWhileHealthy',
+    'aia-vitality': 'aiaVitality',
+    'aia-partner-benefits': 'aiaPartnerBenefits'
   }
   return map[slug.value] || ''
 })

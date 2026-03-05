@@ -1,0 +1,10 @@
+[
+  { "slug": "udon-thani", "nameTh": "อุดรธานี", "nameEn": "Udon Thani" },
+  { "slug": "khon-kaen", "nameTh": "ขอนแก่น", "nameEn": "Khon Kaen" },
+  { "slug": "nong-khai", "nameTh": "หนองคาย", "nameEn": "Nong Khai" },
+  { "slug": "nong-bua-lamphu", "nameTh": "หนองบัวลำภู", "nameEn": "Nong Bua Lamphu" },
+  { "slug": "loei", "nameTh": "เลย", "nameEn": "Loei" },
+  { "slug": "sakon-nakhon", "nameTh": "สกลนคร", "nameEn": "Sakon Nakhon" },
+  { "slug": "bueng-kan", "nameTh": "บึงกาฬ", "nameEn": "Bueng Kan" },
+  { "slug": "nakhon-ratchasima", "nameTh": "นครราชสีมา (โคราช)", "nameEn": "Nakhon Ratchasima" }
+]

@@ -8,7 +8,7 @@
             <img
               :src="agentImg"
               :alt="t('about.agentName')"
-              class="h-48 w-48 rounded-2xl object-cover object-top shadow-lg ring-2 ring-[var(--color-aia-red)]/20 sm:h-56 sm:w-56 md:h-64 md:w-64"
+              class="h-56 w-56 rounded-2xl object-cover object-top shadow-lg sm:h-64 sm:w-64 md:h-80 md:w-80"
             />
           </div>
           <div class="flex-1 text-center md:text-left">
@@ -195,7 +195,7 @@
 </template>
 
 <script setup lang="ts">
-import agentImg from '~/assets/img/pngtree-happy-corporate-business-professional-one-man-clipart-white-background-png-image_10329231.png'
+import agentImg from '~/assets/img/profile.png'
 import logoAia from '~/assets/img/logoaianobg.png'
 const { t } = useI18n()
 

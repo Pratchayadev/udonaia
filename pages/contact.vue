@@ -9,6 +9,19 @@
       </p>
       <div class="mt-10 space-y-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
         <a
+          href="https://lin.ee/LfV048B"
+          target="_blank"
+          rel="noopener"
+          class="flex flex-col items-center gap-3 rounded-xl border border-slate-200 p-4 transition hover:bg-slate-50"
+        >
+          <img
+            src="/line/M_gainfriends_2dbarcodes_BW.png"
+            alt="Line QR Code - Add Friend"
+            class="h-40 w-40 object-contain"
+          />
+          <span class="text-sm font-medium text-slate-700">{{ t('contact.line') }} — สแกนเพิ่มเพื่อน</span>
+        </a>
+        <!-- <a
           href="tel:0800000000"
           class="flex items-center gap-3 rounded-xl border border-slate-200 p-4 transition hover:bg-slate-50"
         >
@@ -19,9 +32,9 @@
             <p class="text-sm text-slate-500">{{ t('contact.phone') }}</p>
             <p class="font-semibold text-slate-800">080-000-0000</p>
           </div>
-        </a>
+        </a> -->
         <a
-          href="https://line.me/ti/p/~YOUR_LINE_ID"
+          href="https://lin.ee/LfV048B"
           target="_blank"
           rel="noopener"
           class="flex items-center gap-3 rounded-xl border border-slate-200 p-4 transition hover:bg-slate-50"
@@ -31,7 +44,7 @@
           </span>
           <div>
             <p class="text-sm text-slate-500">{{ t('contact.line') }}</p>
-            <p class="font-semibold text-slate-800">@your-line-id</p>
+            <p class="font-semibold text-slate-800">@226lroey</p>
           </div>
         </a>
         <a
@@ -61,5 +74,4 @@
 <script setup lang="ts">
 const { t } = useI18n()
 const localePath = useLocalePath()
-
 </script>

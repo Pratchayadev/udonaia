@@ -16,10 +16,7 @@ export default defineNuxtConfig({
     lazy: true,
     langDir: 'locales',
     restructureDir: false,
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: 'i18n_redirected'
-    }
+    detectBrowserLanguage: false
   },
   runtimeConfig: {
     public: {
@@ -29,17 +26,20 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      titleTemplate: (titleChunk) => (titleChunk ? `${titleChunk} | พรปวีณ์ ศรีพิมพ์สอ ตัวแทน AIA` : 'พรปวีณ์ ศรีพิมพ์สอ | ตัวแทนประกัน AIA ภาคอีสาน อุดรธานี ขอนแก่น หนองคาย'),
+      titleTemplate: (titleChunk) => (titleChunk ? `${titleChunk} | ตัวแทนประกัน AIA อุดรธานี พรปวีณ์ ศรีพิมพ์สอ` : 'ตัวแทนประกันชีวิต AIA อุดรธานี | สมัครประกัน AIA ภาคอีสาน'),
       htmlAttrs: { lang: 'th' },
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
-        { name: 'description', content: 'ตัวแทนประกัน AIA ภาคอีสาน อุดรธานี ขอนแก่น หนองคาย หนองบัว เลย สกลนคร ลาว — ประกันชีวิต ประกันสุขภาพ เช็คเบี้ยฟรี วางแผนไม่ขายเกินจำเป็น' },
-        { name: 'keywords', content: 'ประกันชีวิต, ประกันสุขภาพ, ตัวแทนประกัน AIA, อุดรธานี, ขอนแก่น, หนองคาย, หนองบัวลำภู, เลย, สกลนคร, ภาคอีสาน, ลาว, เช็คเบี้ยฟรี, วางแผนประกัน, ประกันอุบัติเหตุ, ประกันครบวงจร' },
+        { name: 'description', content: 'ตัวแทน AIA อุดรธานี ภาคอีสาน — ประกันชีวิต ประกันสุขภาพ AIA ขอนแก่น หนองคาย หนองบัว เลย สกลนคร บึงกาฬ เช็คเบี้ยฟรี วางแผนไม่ขายเกินจำเป็น พรปวีณ์ ศรีพิมพ์สอ' },
+        { name: 'keywords', content: 'ตัวแทนประกันชีวิต AIA, สมัครประกัน AIA, ทำประกัน AIA ออนไลน์, ประกันสุขภาพ AIA, ตัวแทน AIA อุดรธานี, ประกันชีวิต ขอนแก่น, ตัวแทน AIA ภาคอีสาน, สมัครประกัน AIA โคราช, ตัวแทน AIA หนองคาย, ตัวแทน AIA สกลนคร, ตัวแทน AIA บึงกาฬ, เช็คเบี้ยฟรี, ลดหย่อนภาษีประกันชีวิต, เคลมประกัน AIA, เปรียบเทียบแผนประกัน AIA' },
         { name: 'author', content: 'พรปวีณ์ ศรีพิมพ์สอ' },
         { name: 'robots', content: 'index, follow' },
         { name: 'theme-color', content: '#e4002b' },
         { name: 'geo.region', content: 'TH-41' },
+        { name: 'geo.placename', content: 'อุดรธานี' },
+        { name: 'geo.position', content: '17.4152;102.7850' },
+        { name: 'ICBM', content: '17.4152, 102.7850' },
         { property: 'og:type', content: 'website' },
         { property: 'og:site_name', content: 'พรปวีณ์ ศรีพิมพ์สอ ตัวแทน AIA ภาคอีสาน' },
         { property: 'og:image:width', content: '1200' },

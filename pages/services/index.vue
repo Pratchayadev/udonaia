@@ -25,6 +25,11 @@
 const { t } = useI18n()
 const localePath = useLocalePath()
 
+useHead({
+  title: () => t('services.title'),
+  meta: [{ name: 'description', content: () => t('seo.defaultDescription') }]
+})
+
 const services = computed(() => ({
   health: {
     title: t('services.health.title'),
