@@ -26,7 +26,12 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      titleTemplate: (titleChunk) => (titleChunk ? `${titleChunk} | ตัวแทนประกัน AIA อุดรธานี พรปวีณ์ ศรีพิมพ์สอ` : 'ตัวแทนประกันชีวิต AIA อุดรธานี | สมัครประกัน AIA ภาคอีสาน'),
+      titleTemplate: (titleChunk) => {
+        const homeTitle = 'ตัวแทน AIA อุดรธานี | ประกันสุขภาพ AIA | ปรึกษาฟรี | สมัครประกัน AIA ภาคอีสาน ขอนแก่น หนองคาย'
+        if (!titleChunk) return homeTitle
+        if (titleChunk === homeTitle || titleChunk.startsWith('ตัวแทน AIA อุดรธานี |')) return titleChunk
+        return `${titleChunk} | พรปวีณ์ ศรีพิมพ์สอ ตัวแทน AIA`
+      },
       htmlAttrs: { lang: 'th' },
       meta: [
         { charset: 'utf-8' },

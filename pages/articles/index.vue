@@ -46,7 +46,12 @@ const articleList = [
   { slug: 'claim-nongkhai-buengkan', key: 'claimNongkhaiBuengkan' },
   { slug: 'insure-while-healthy', key: 'insureWhileHealthy' },
   { slug: 'aia-vitality', key: 'aiaVitality' },
-  { slug: 'aia-partner-benefits', key: 'aiaPartnerBenefits' }
+  { slug: 'aia-partner-benefits', key: 'aiaPartnerBenefits' },
+  { slug: 'health-necessary-2025', key: 'healthNecessary2025' },
+  { slug: 'aia-health-good', key: 'aiaHealthGood' },
+  { slug: 'agent-udon-free-consult', key: 'agentUdonFreeConsult' },
+  { slug: 'cancer-treatment-cost-thailand', key: 'cancerTreatmentCostThailand' },
+  { slug: 'buy-through-agent-or-self', key: 'buyThroughAgentOrSelf' }
 ]
 
 useHead({
