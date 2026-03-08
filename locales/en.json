@@ -120,6 +120,10 @@
   },
   "articles": {
     "listTitle": "Articles",
+    "listAdded": "Added",
+    "listPrev": "Previous",
+    "listNext": "Next",
+    "listPageOf": "Page {current} of {total}",
     "backToArticles": "Back to articles",
     "ctaCheckQuote": "Get free quote",
     "healthSum": {
@@ -429,6 +433,28 @@
       "s6Body": "For those who want detailed advice, buying through an advisor is often the better option.",
       "s7Title": "Free consultation",
       "s7Body": "Want advice before buying insurance? Contact udonaia.com, AIA advisor Udon Thani, Northeast. Free, no obligation."
+    },
+    "elderlyHealthLaosAia": {
+      "title": "Elderly health insurance and can Lao nationals buy insurance in Thailand?",
+      "metaDesc": "What is elderly health insurance, what does it cover, when to buy. Can Lao nationals buy health insurance in Thailand? Can you buy AIA from Laos? Free consultation Udon Thani, Northeast.",
+      "coverImage": "https://img5.pic.in.th/file/secure-sv1/Gemini_Generated_Image_5ahdz05ahdz05ahd.png",
+      "s1Title": "What is elderly health insurance?",
+      "s1Body": "As we age, the risk of illness increases, especially chronic conditions such as heart disease, diabetes, high blood pressure and cancer.\n\nMedical costs for these can range from tens of thousands to millions of baht, so many families look to elderly health insurance to help with costs.",
+      "s1Image": "https://img5.pic.in.th/file/secure-sv1/Gemini_Generated_Image_5ahdz05ahdz05ahd.png",
+      "s2Title": "Can elderly people get health insurance?",
+      "s2Body": "Many insurers, including AIA, offer plans for older adults. Typically you can apply from around 50–70 years old, depending on the plan. Applicants may need to answer health questions and sometimes have a medical check-up.",
+      "s3Title": "What does elderly health insurance cover?",
+      "s3Body": "Generally it covers costs such as hospital room, surgery, medicine and critical illness treatment. Some plans are sum-insured, which helps with unexpectedly high costs.",
+      "s4Title": "When should you get elderly health insurance?",
+      "s4Body": "Financial experts often recommend buying health insurance while still relatively young, because premiums are lower, underwriting is easier and the chance of rejection is lower.",
+      "s5Title": "Can Lao nationals buy insurance in Thailand?",
+      "s5Body": "Many in Laos, especially those who come to Thailand for treatment, ask whether Lao nationals can buy health insurance in Thailand. The answer is yes in some cases.\n\nBasic requirements: You usually need to travel to Thailand, have ID such as a passport, and meet the insurer’s underwriting rules. Some insurers may ask for more details on health, work and address.\n\nWhy Lao nationals buy in Thailand: Thai hospitals have high standards, transparent costs and many well-known private hospitals. Border cities such as Udon Thani, Khon Kaen and Nong Khai are popular with patients from Laos.\n\nBefore buying, check: policy coverage, treatment terms and which hospitals you can use.\n\nSummary: Lao nationals can buy insurance in Thailand in some cases, subject to insurer conditions. Consulting an advisor helps you choose the right plan.",
+      "s5Image": "https://img5.pic.in.th/file/secure-sv1/Gemini_Generated_Image_o2ak87o2ak87o2ak.png",
+      "s6Title": "Can you buy AIA insurance from Laos?",
+      "s6Body": "AIA is a well-known insurer in Asia, including Thailand and Laos. Many wonder if you can buy AIA insurance in Thailand while living in Laos.\n\nAIA operates in many countries: Thailand, Laos, Singapore, Hong Kong, Malaysia, so customers can choose where to buy.\n\nIf you are in Laos and want AIA in Thailand: for example to use Thai hospitals, travel to Thailand often, or work or run a business there. Applications still go through the insurer’s process.\n\nConsulting an advisor helps with: application conditions, suitable plans, coverage and paperwork.\n\nSummary: People in Laos can enquire about buying AIA in Thailand; approval depends on the insurer’s terms.",
+      "s6Image": "https://img5.pic.in.th/file/secure-sv1/Gemini_Generated_Image_o2ak87o2ak87o2ak.png",
+      "s7Title": "Free consultation",
+      "s7Body": "For advice on AIA health insurance, contact us for more information."
     }
   }
 }

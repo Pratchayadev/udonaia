@@ -19,7 +19,7 @@ export function useSeo(options: {
   const title = options.title ?? t('seo.defaultTitle')
   const description = options.description ?? t('seo.defaultDescription')
   const canonical = baseUrl ? `${baseUrl}${path}` : ''
-  const ogImage = options.image ?? (baseUrl ? `${baseUrl}/og-image.svg` : '')
+  const ogImage = options.image ?? (baseUrl ? `${baseUrl}/og-image.png` : '')
 
   const switchLocalePath = useSwitchLocalePath()
   const hreflangLinks = baseUrl
