@@ -48,9 +48,9 @@
           </div>
         </a>
         <a
-          href="#"
+          href="https://www.facebook.com/udonaia/"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           class="flex items-center gap-3 rounded-xl border border-slate-200 p-4 transition hover:bg-slate-50"
         >
           <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#1877F2] text-white">
@@ -58,7 +58,7 @@
           </span>
           <div>
             <p class="text-sm text-slate-500">{{ t('contact.facebook') }}</p>
-            <p class="font-semibold text-slate-800">Facebook Page</p>
+            <p class="font-semibold text-slate-800">udonaia</p>
           </div>
         </a>
       </div>
