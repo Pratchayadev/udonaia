@@ -78,6 +78,7 @@ const articleKey = computed(() => {
     'agent-udon-free-consult': 'agentUdonFreeConsult',
     'cancer-treatment-cost-thailand': 'cancerTreatmentCostThailand',
     'buy-through-agent-or-self': 'buyThroughAgentOrSelf',
+    'copayment-aia-health': 'copaymentAiaHealth',
     'elderly-health-laos-aia': 'elderlyHealthLaosAia'
   }
   return map[slug.value] || ''
