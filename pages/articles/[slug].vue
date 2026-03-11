@@ -79,7 +79,9 @@ const articleKey = computed(() => {
     'cancer-treatment-cost-thailand': 'cancerTreatmentCostThailand',
     'buy-through-agent-or-self': 'buyThroughAgentOrSelf',
     'copayment-aia-health': 'copaymentAiaHealth',
-    'elderly-health-laos-aia': 'elderlyHealthLaosAia'
+    'elderly-health-laos-aia': 'elderlyHealthLaosAia',
+    'health-coverage-what': 'healthCoverageWhat',
+    'choose-insurance-not-scammed': 'chooseInsuranceNotScammed'
   }
   return map[slug.value] || ''
 })

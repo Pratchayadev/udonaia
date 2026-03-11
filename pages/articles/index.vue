@@ -97,6 +97,8 @@ function formatAddedAt(addedAt: string) {
 }
 
 const articleList: { slug: string; key: string; addedAt: string }[] = [
+  { slug: 'choose-insurance-not-scammed', key: 'chooseInsuranceNotScammed', addedAt: '2026-03-11' },
+  { slug: 'health-coverage-what', key: 'healthCoverageWhat', addedAt: '2026-03-11' },
   { slug: 'copayment-aia-health', key: 'copaymentAiaHealth', addedAt: '2026-03-10' },
   { slug: 'elderly-health-laos-aia', key: 'elderlyHealthLaosAia', addedAt: '2026-03-08' },
   { slug: 'health-necessary-2025', key: 'healthNecessary2025', addedAt: '2026-03-07' },
