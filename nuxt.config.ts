@@ -20,7 +20,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://aia-advisor.example.com',
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://udonaia.com',
       siteName: 'พรปวีณ์ ศรีพิมพ์สอ | ตัวแทนประกัน AIA ภาคอีสาน'
     }
   },
