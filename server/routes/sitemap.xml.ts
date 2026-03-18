@@ -1,6 +1,6 @@
 export default defineEventHandler((event) => {
   const config = useRuntimeConfig(event).public
-  const baseUrl = (config as { siteUrl?: string }).siteUrl || 'https://your-domain.com'
+  const baseUrl = (config as { siteUrl?: string }).siteUrl || 'https://udonaia.com'
   const locales = ['', '/en', '/lo'] // default th, en, lo
   const paths = [
     '',
