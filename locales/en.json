@@ -454,6 +454,25 @@
       "s7Title": "Summary and advice",
       "s7Body": "Copayment or cost‑sharing is an important condition in health insurance that you should understand before buying, especially in AIA health plans where copay may apply based on underwriting. Knowing how it works helps you choose coverage that fits both your needs and your finances. If you are unsure, talk to a qualified advisor before you decide."
     },
+    "aiaLumpSumGuide": {
+      "title": "What is AIA sum-insured health insurance? A simple guide before you decide",
+      "metaDesc": "What is AIA sum-insured health insurance, how it differs from sub-limit plans, key benefits, who it suits, recommended coverage limits, and what to check before buying.",
+      "coverImage": "https://i.ibb.co/fdkdVLB7/Gemini-Generated-Image-ckf5qickf5qickf5.png",
+      "s1Title": "What is sum-insured health insurance?",
+      "s1Body": "Sum-insured health insurance pays actual medical costs within one annual total limit. For example, with 1,000,000 THB per year, claims like 300,000 or 800,000 THB can be paid as long as they are within the total limit, without strict sub-limits for room, surgery, or medicine.",
+      "s2Title": "How is it different from sub-limit plans?",
+      "s2Body": "Sub-limit plans cap each category separately (room per day, surgery schedule, medicine cap), which can cause gaps when real costs exceed category limits. Sum-insured plans pool the limit into one amount, making usage more flexible and practical for modern healthcare costs.",
+      "s3Title": "Key strengths of AIA sum-insured plans",
+      "s3Body": "AIA sum-insured plans are flexible for major surgery, serious illness treatment, and private hospital care. They reduce concern about one category running out first and better support long-term inflation in medical costs. AIA Vitality also adds wellness incentives.",
+      "s4Title": "Who is it suitable for?",
+      "s4Body": "It suits working adults needing stronger protection, people preferring private hospitals, those who do not want to manage many small sub-limits, and families planning long-term financial security.",
+      "s5Title": "How much coverage should you choose?",
+      "s5Body": "A practical starting point is at least 500,000 THB per year, with 1,000,000 THB or more generally recommended to better match current private-hospital costs and high-expense treatment scenarios.",
+      "s6Title": "What to check before choosing",
+      "s6Body": "Check copayment terms, waiting periods, and policy exclusions carefully. Also choose a premium level you can sustain long-term so your policy remains active when you need it most.",
+      "s7Title": "Summary and internal links",
+      "s7Body": "AIA sum-insured health insurance is a strong option for flexible real-cost coverage and lower risk of unexpected out-of-pocket costs. Related reading: What does health insurance cover? https://udonaia.com/articles/health-coverage-what and What is copayment? https://udonaia.com/articles/copayment-aia-health"
+    },
     "chooseInsuranceNotScammed": {
       "title": "How to choose insurance and avoid being scammed? 7 tips before you buy",
       "metaDesc": "How to choose insurance without being scammed. Check insurer, agent, policy terms, avoid overclaims, pick the right plan, compare before deciding. Free consultation Udon Thani, Northeast.",
@@ -491,6 +510,25 @@
       "s6Body": "Health insurance typically covers room, medicine and treatment, surgery, diagnostics, doctor visits and post-discharge care. Having coverage helps reduce the risk of hundreds of thousands or millions in costs that can happen at any time.",
       "s7Title": "Free consultation",
       "s7Body": "If you are planning to buy health insurance, compare plans to find one that fits your needs and budget, or talk to an advisor for tailored advice."
+    },
+    "aiaHealthGood2026": {
+      "title": "Is AIA health insurance good? Understand coverage before you decide",
+      "metaDesc": "Is AIA health insurance good? Learn about sum-insured coverage, hospital network access, copayment and waiting periods to choose a plan that fits your budget and needs.",
+      "coverImage": "https://i.ibb.co/Q71Qcxjr/Gemini-Generated-Image-csyjphcsyjphcsyj.png",
+      "s1Title": "What is AIA health insurance?",
+      "s1Body": "AIA health insurance is designed to cover medical expenses such as room charges, surgery, medicine, diagnostics and doctor fees. Many plans are sum-insured, allowing flexible use of actual treatment costs within the annual limit.",
+      "s2Title": "Key strengths of AIA health insurance",
+      "s2Body": "A major strength is sum-insured coverage, which reduces concern about sub-limits and fits modern treatment costs better. Policyholders can also access leading private hospitals subject to policy terms, improving convenience and confidence.",
+      "s3Title": "Wellness benefits and plan flexibility",
+      "s3Body": "AIA also offers AIA Vitality, a wellness program with benefits such as activity-based points and rewards. There are multiple plan levels, so you can choose based on budget, coverage expectations and lifestyle.",
+      "s4Title": "Who is AIA health insurance suitable for?",
+      "s4Body": "It is suitable for employees wanting to reduce medical-cost risk, business owners without company benefits, families planning long-term protection, and people who prefer treatment at private hospitals.",
+      "s5Title": "What to check before buying",
+      "s5Body": "Before buying, review: 1) sufficient coverage limit (often 500,000–1,000,000 THB or more), 2) copayment terms, 3) waiting periods (e.g. 30 days general illness, 90–120 days for some conditions), and 4) policy exclusions such as pre-existing conditions or non-medically necessary treatment.",
+      "s6Title": "How it supports financial planning",
+      "s6Body": "Health insurance helps reduce the risk of large unexpected bills, stabilizes financial planning and improves access to quality care. Serious illnesses can cost hundreds of thousands or millions of baht, so insurance acts as financial protection.",
+      "s7Title": "Summary",
+      "s7Body": "AIA health insurance is a strong option thanks to sum-insured coverage, flexible plans and wellness support like AIA Vitality. Still, choose based on your own needs and read policy details carefully before deciding. Learn more at https://udonaia.com."
     },
     "elderlyHealthLaosAia": {
       "title": "Elderly health insurance and can Lao nationals buy insurance in Thailand?",

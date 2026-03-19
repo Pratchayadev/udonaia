@@ -29,6 +29,8 @@ export default defineEventHandler((event) => {
     '/articles/health-coverage-what',
     '/articles/choose-insurance-not-scammed',
     '/articles/choose-health-insurance-guide',
+    '/articles/aia-health-good-2026',
+    '/articles/aia-lump-sum-guide',
     '/contact',
     '/portfolio',
     '/area/udon-thani',

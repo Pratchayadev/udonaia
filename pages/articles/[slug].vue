@@ -78,6 +78,8 @@ const articleKey = computed(() => {
     'agent-udon-free-consult': 'agentUdonFreeConsult',
     'cancer-treatment-cost-thailand': 'cancerTreatmentCostThailand',
     'buy-through-agent-or-self': 'buyThroughAgentOrSelf',
+    'aia-lump-sum-guide': 'aiaLumpSumGuide',
+    'aia-health-good-2026': 'aiaHealthGood2026',
     'copayment-aia-health': 'copaymentAiaHealth',
     'elderly-health-laos-aia': 'elderlyHealthLaosAia',
     'health-coverage-what': 'healthCoverageWhat',
