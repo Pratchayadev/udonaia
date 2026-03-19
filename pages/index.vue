@@ -24,7 +24,9 @@
               <img :src="logoAia" alt="AIA" class="h-5 w-auto object-contain opacity-80" />
               <span>{{ t('about.role') }}</span>
             </p>
-            <a href="#lead-form" class="btn-primary mt-8 inline-flex text-lg" @click.prevent="scrollToLead">{{ t('hero.cta') }}</a>
+            <NuxtLink :to="localePath('/contact')" class="btn-primary mt-8 inline-flex text-lg">
+              {{ t('hero.cta') }}
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -54,7 +56,7 @@
           {{ t('pain.close') }}
         </p>
         <p class="mt-4 text-center">
-          <a href="#lead-form" class="btn-secondary" @click.prevent="scrollToLead">{{ t('pain.cta') }}</a>
+          <NuxtLink :to="localePath('/contact')" class="btn-secondary">{{ t('pain.cta') }}</NuxtLink>
         </p>
       </div>
     </section>
@@ -78,7 +80,7 @@
           </li>
         </ul>
         <p class="mt-10 text-center">
-          <a href="#lead-form" class="btn-primary" @click.prevent="scrollToLead">{{ t('solution.cta') }}</a>
+          <NuxtLink :to="localePath('/contact')" class="btn-primary">{{ t('solution.cta') }}</NuxtLink>
         </p>
       </div>
     </section>
@@ -101,71 +103,64 @@
       </div>
     </section>
 
-    <!-- Lead Form -->
-    <section id="lead-form" class="section-pad bg-[var(--color-modern)] scroll-mt-20 animate-on-scroll">
+    <!-- Contact CTA -->
+    <section class="section-pad bg-[var(--color-modern)] animate-on-scroll">
       <div class="container-narrow max-w-xl">
         <div class="flex flex-col items-center gap-3">
           <img :src="logoAia" alt="AIA" class="h-10 w-auto object-contain opacity-90" />
           <h2 class="heading-section text-center text-[var(--color-aia-red)]">
-            {{ t('leadForm.title') }}
+            {{ t('contact.title') }}
           </h2>
         </div>
-        <form class="mt-8 space-y-4 rounded-2xl bg-white p-6 shadow-lg sm:p-8" @submit.prevent="onSubmit">
-          <div>
-            <label class="mb-1 block text-sm font-medium text-slate-700">{{ t('leadForm.name') }}</label>
-            <input
-              v-model="form.name"
-              type="text"
-              class="w-full rounded-lg border border-slate-300 px-4 py-2.5 focus:border-[var(--color-aia-red)] focus:outline-none focus:ring-1 focus:ring-[var(--color-aia-red)]"
-              required
+        <p class="mt-3 text-center text-slate-600">{{ t('contact.message') }}</p>
+        <div class="mt-8 space-y-4 rounded-2xl bg-white p-6 shadow-lg sm:p-8">
+          <a
+            href="https://lin.ee/LfV048B"
+            target="_blank"
+            rel="noopener"
+            class="flex flex-col items-center gap-3 rounded-xl border border-slate-200 p-4 transition hover:bg-slate-50"
+          >
+            <img
+              src="/line/M_gainfriends_2dbarcodes_BW.png"
+              alt="Line QR Code - Add Friend"
+              class="h-40 w-40 object-contain"
             />
-          </div>
-          <div class="grid gap-4 sm:grid-cols-2">
+            <span class="text-sm font-medium text-slate-700">{{ t('contact.line') }} — สแกนเพิ่มเพื่อน</span>
+          </a>
+          <a
+            href="https://lin.ee/LfV048B"
+            target="_blank"
+            rel="noopener"
+            class="flex items-center gap-3 rounded-xl border border-slate-200 p-4 transition hover:bg-slate-50"
+          >
+            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#06C755] text-white">
+              <span class="text-lg font-bold">L</span>
+            </span>
             <div>
-              <label class="mb-1 block text-sm font-medium text-slate-700">{{ t('leadForm.age') }}</label>
-              <input
-                v-model="form.age"
-                type="number"
-                min="18"
-                max="99"
-                class="w-full rounded-lg border border-slate-300 px-4 py-2.5 focus:border-[var(--color-aia-red)] focus:outline-none focus:ring-1 focus:ring-[var(--color-aia-red)]"
-                required
-              />
+              <p class="text-sm text-slate-500">{{ t('contact.line') }}</p>
+              <p class="font-semibold text-slate-800">@226lroey</p>
             </div>
+          </a>
+          <a
+            href="https://www.facebook.com/udonaia/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-3 rounded-xl border border-slate-200 p-4 transition hover:bg-slate-50"
+          >
+            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-[#1877F2] text-white">
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </span>
             <div>
-              <label class="mb-1 block text-sm font-medium text-slate-700">{{ t('leadForm.job') }}</label>
-              <input
-                v-model="form.job"
-                type="text"
-                class="w-full rounded-lg border border-slate-300 px-4 py-2.5 focus:border-[var(--color-aia-red)] focus:outline-none focus:ring-1 focus:ring-[var(--color-aia-red)]"
-                required
-              />
+              <p class="text-sm text-slate-500">{{ t('contact.facebook') }}</p>
+              <p class="font-semibold text-slate-800">udonaia</p>
             </div>
-          </div>
-          <div>
-            <label class="mb-1 block text-sm font-medium text-slate-700">{{ t('leadForm.phone') }}</label>
-            <input
-              v-model="form.phone"
-              type="tel"
-              class="w-full rounded-lg border border-slate-300 px-4 py-2.5 focus:border-[var(--color-aia-red)] focus:outline-none focus:ring-1 focus:ring-[var(--color-aia-red)]"
-              required
-            />
-          </div>
-          <div>
-            <label class="mb-1 block text-sm font-medium text-slate-700">{{ t('leadForm.lineId') }}</label>
-            <input
-              v-model="form.lineId"
-              type="text"
-              class="w-full rounded-lg border border-slate-300 px-4 py-2.5 focus:border-[var(--color-aia-red)] focus:outline-none focus:ring-1 focus:ring-[var(--color-aia-red)]"
-            />
-          </div>
-          <button type="submit" class="btn-primary w-full">
-            {{ t('leadForm.cta') }}
-          </button>
-          <p class="text-center text-xs text-slate-500">
-            {{ t('leadForm.privacy') }}
+          </a>
+          <p class="text-center">
+            <NuxtLink :to="localePath('/contact')" class="btn-primary inline-flex">
+              {{ t('nav.consult') }}
+            </NuxtLink>
           </p>
-        </form>
+        </div>
       </div>
     </section>
 
@@ -198,6 +193,7 @@
 import agentImg from '~/assets/img/profile.png'
 import logoAia from '~/assets/img/logoaianobg.png'
 const { t } = useI18n()
+const localePath = useLocalePath()
 
 const solutionItems = computed(() => [
   t('solution.item1'),
@@ -212,28 +208,4 @@ const reviews = computed(() => [
   t('socialProof.review3')
 ])
 
-const form = reactive({
-  name: '',
-  age: '',
-  job: '',
-  phone: '',
-  lineId: ''
-})
-
-function scrollToLead () {
-  const el = document.getElementById('lead-form')
-  el?.scrollIntoView({ behavior: 'smooth' })
-}
-
-function onSubmit () {
-  // In production: send to API / Line OA
-  const text = `ชื่อ: ${form.name}\nอายุ: ${form.age}\nอาชีพ: ${form.job}\nโทร: ${form.phone}\nLine: ${form.lineId}`
-  window.open(`https://line.me/R/msg/text/?${encodeURIComponent(text)}`, '_blank')
-}
-
-onMounted(() => {
-  if (typeof window !== 'undefined' && window.location.hash === '#lead-form') {
-    nextTick(() => scrollToLead())
-  }
-})
 </script>
