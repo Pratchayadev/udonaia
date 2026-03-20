@@ -208,4 +208,9 @@ const reviews = computed(() => [
   t('socialProof.review3')
 ])
 
+useHead({
+  title: 'ตัวแทนประกันชีวิต ประกันสุขภาพ AIA อุดรธานี - ขอนแก่น',
+  titleTemplate: '%s'
+})
+
 </script>
