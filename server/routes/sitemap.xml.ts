@@ -32,6 +32,7 @@ export default defineEventHandler((event) => {
     '/articles/aia-health-good-2026',
     '/articles/aia-lump-sum-guide',
     '/articles/aia-new-health-standard',
+    '/articles/aia-company-history-asia',
     '/contact',
     '/portfolio',
     '/area/udon-thani',

@@ -61,6 +61,7 @@
 
 <script setup lang="ts">
 import { aiaNewHealthStandardBodies } from '~/content/articleBodies/aiaNewHealthStandard'
+import { aiaCompanyHistoryAsiaBodies } from '~/content/articleBodies/aiaCompanyHistoryAsia'
 
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
@@ -91,13 +92,14 @@ const articleKey = computed(() => {
     'elderly-health-laos-aia': 'elderlyHealthLaosAia',
     'health-coverage-what': 'healthCoverageWhat',
     'choose-insurance-not-scammed': 'chooseInsuranceNotScammed',
-    'aia-new-health-standard': 'aiaNewHealthStandard'
+    'aia-new-health-standard': 'aiaNewHealthStandard',
+    'aia-company-history-asia': 'aiaCompanyHistoryAsia'
   }
   return map[slug.value] || ''
 })
 
 /** บทความที่ sNBody เป็น HTML (b, u, ลิงก์ภายใน) — แปลง href ด้วย localePath */
-const articleKeysWithRichHtmlBody = new Set(['aiaNewHealthStandard'])
+const articleKeysWithRichHtmlBody = new Set(['aiaNewHealthStandard', 'aiaCompanyHistoryAsia'])
 
 const hasRichArticleBody = computed(
   () => articleKey.value && articleKeysWithRichHtmlBody.has(articleKey.value)
@@ -112,6 +114,12 @@ function localizedArticleSectionBody(sectionIndex: number) {
     raw =
       aiaNewHealthStandardBodies[loc][sectionIndex] ??
       aiaNewHealthStandardBodies.th[sectionIndex] ??
+      ''
+  } else if (key === 'aiaCompanyHistoryAsia') {
+    const loc = locale.value === 'en' ? 'en' : locale.value === 'lo' ? 'lo' : 'th'
+    raw =
+      aiaCompanyHistoryAsiaBodies[loc][sectionIndex] ??
+      aiaCompanyHistoryAsiaBodies.th[sectionIndex] ??
       ''
   } else {
     raw = t(`articles.${key}.s${sectionIndex}Body`)

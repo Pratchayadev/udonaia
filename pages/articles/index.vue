@@ -98,6 +98,7 @@ function formatAddedAt(addedAt: string) {
 
 const articleList: { slug: string; key: string; addedAt: string }[] = [
   { slug: 'aia-new-health-standard', key: 'aiaNewHealthStandard', addedAt: '2026-03-22' },
+  { slug: 'aia-company-history-asia', key: 'aiaCompanyHistoryAsia', addedAt: '2026-03-22' },
   { slug: 'aia-lump-sum-guide', key: 'aiaLumpSumGuide', addedAt: '2026-03-19' },
   { slug: 'aia-health-good-2026', key: 'aiaHealthGood2026', addedAt: '2026-03-19' },
   { slug: 'choose-insurance-not-scammed', key: 'chooseInsuranceNotScammed', addedAt: '2026-03-11' },
