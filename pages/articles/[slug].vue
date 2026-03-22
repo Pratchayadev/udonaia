@@ -35,7 +35,12 @@
               class="my-4 w-full rounded-lg object-cover max-h-[280px]"
               loading="lazy"
             />
-            <p class="mt-2 whitespace-pre-line text-slate-600">
+            <p
+              v-if="hasRichArticleBody"
+              class="article-rich-body mt-2 text-slate-600"
+              v-html="localizedArticleSectionBody(i)"
+            />
+            <p v-else class="mt-2 whitespace-pre-line text-slate-600">
               {{ t(`articles.${articleKey}.s${i}Body`) }}
             </p>
           </section>
@@ -55,7 +60,9 @@
 </template>
 
 <script setup lang="ts">
-const { t } = useI18n()
+import { aiaNewHealthStandardBodies } from '~/content/articleBodies/aiaNewHealthStandard'
+
+const { t, locale } = useI18n()
 const localePath = useLocalePath()
 const route = useRoute()
 const slug = computed(() => route.params.slug as string)
@@ -83,10 +90,39 @@ const articleKey = computed(() => {
     'copayment-aia-health': 'copaymentAiaHealth',
     'elderly-health-laos-aia': 'elderlyHealthLaosAia',
     'health-coverage-what': 'healthCoverageWhat',
-    'choose-insurance-not-scammed': 'chooseInsuranceNotScammed'
+    'choose-insurance-not-scammed': 'chooseInsuranceNotScammed',
+    'aia-new-health-standard': 'aiaNewHealthStandard'
   }
   return map[slug.value] || ''
 })
+
+/** บทความที่ sNBody เป็น HTML (b, u, ลิงก์ภายใน) — แปลง href ด้วย localePath */
+const articleKeysWithRichHtmlBody = new Set(['aiaNewHealthStandard'])
+
+const hasRichArticleBody = computed(
+  () => articleKey.value && articleKeysWithRichHtmlBody.has(articleKey.value)
+)
+
+function localizedArticleSectionBody(sectionIndex: number) {
+  const key = articleKey.value
+  if (!key || !articleKeysWithRichHtmlBody.has(key)) return ''
+  let raw = ''
+  if (key === 'aiaNewHealthStandard') {
+    const loc = locale.value === 'en' ? 'en' : locale.value === 'lo' ? 'lo' : 'th'
+    raw =
+      aiaNewHealthStandardBodies[loc][sectionIndex] ??
+      aiaNewHealthStandardBodies.th[sectionIndex] ??
+      ''
+  } else {
+    raw = t(`articles.${key}.s${sectionIndex}Body`)
+  }
+  raw = raw.replace(/href='\/articles\/([^']+)'/g, (_m, slugPath: string) => {
+    return `href='${localePath('/articles/' + slugPath)}'`
+  })
+  raw = raw.replace(/href='\/services'/g, () => `href='${localePath('/services')}'`)
+  raw = raw.replace(/href='\/contact'/g, () => `href='${localePath('/contact')}'`)
+  return raw
+}
 
 const articleTitle = computed(() =>
   articleKey.value ? t(`articles.${articleKey.value}.title`) : t('articles.listTitle')

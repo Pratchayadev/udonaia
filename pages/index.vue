@@ -13,10 +13,27 @@
           </div>
           <div class="flex-1 text-center md:text-left">
             <h1 class="heading-hero text-[var(--color-aia-red)]">
-              {{ t('hero.headline') }}
+              <i18n-t keypath="hero.headline" tag="span">
+                <template #kwHealth>
+                  <SeoKeywordLink keyword="healthAia" :to="seoLinks.healthAia" />
+                </template>
+                <template #kwHeroAdvisor>
+                  <SeoKeywordLink keyword="heroAdvisor" :to="seoLinks.agentUdon" />
+                </template>
+              </i18n-t>
             </h1>
             <p class="mt-4 text-lg text-slate-600 sm:text-xl">
-              {{ t('hero.subheadline') }}
+              <i18n-t keypath="hero.subheadline" tag="span">
+                <template #kwPlan>
+                  <SeoKeywordLink keyword="plan" :to="seoLinks.services" />
+                </template>
+                <template #kwMedical>
+                  <SeoKeywordLink keyword="medicalCosts" :to="seoLinks.healthCoverage" />
+                </template>
+                <template #kwProvince>
+                  <SeoKeywordLink keyword="udonProvince" :to="seoLinks.agentUdon" />
+                </template>
+              </i18n-t>
             </p>
             <p class="mt-2 flex flex-wrap items-center justify-center gap-2 text-sm font-medium text-slate-500 md:justify-start">
               <span>{{ t('about.agentName') }}</span>
@@ -24,9 +41,14 @@
               <img :src="logoAia" alt="AIA" class="h-5 w-auto object-contain opacity-80" />
               <span>{{ t('about.role') }}</span>
             </p>
-            <NuxtLink :to="localePath('/contact')" class="btn-primary mt-8 inline-flex text-lg">
-              {{ t('hero.cta') }}
-            </NuxtLink>
+            <div class="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-center md:justify-start">
+              <NuxtLink :to="localePath('/contact')" class="btn-primary inline-flex justify-center text-lg">
+                {{ t('hero.cta') }}
+              </NuxtLink>
+              <NuxtLink :to="localePath('/contact')" class="btn-secondary inline-flex justify-center text-lg">
+                {{ t('hero.ctaSecondary') }}
+              </NuxtLink>
+            </div>
           </div>
         </div>
       </div>
@@ -82,6 +104,95 @@
         <p class="mt-10 text-center">
           <NuxtLink :to="localePath('/contact')" class="btn-primary">{{ t('solution.cta') }}</NuxtLink>
         </p>
+      </div>
+    </section>
+
+    <!-- Editorial SEO: H2 structure + keywords (th: ประกันสุขภาพ AIA, AIA อุดรธานี) -->
+    <section class="section-pad bg-white animate-on-scroll" aria-label="AIA health insurance Udon Thani">
+      <div class="container-narrow">
+        <article class="space-y-12">
+          <div>
+            <h2 id="home-why-aia-health" class="heading-section mb-4 text-[var(--color-aia-red)]">
+              <i18n-t keypath="homeContent.whyTitle" tag="span">
+                <template #kwHealth>
+                  <SeoKeywordLink keyword="healthAia" :to="seoLinks.healthAia" />
+                </template>
+              </i18n-t>
+            </h2>
+            <p class="leading-relaxed text-slate-700">
+              <i18n-t keypath="homeContent.whyP1" tag="span">
+                <template #kwHealth>
+                  <SeoKeywordLink keyword="healthAia" :to="seoLinks.healthAia" />
+                </template>
+              </i18n-t>
+            </p>
+            <p class="mt-4 leading-relaxed text-slate-700">
+              <i18n-t keypath="homeContent.whyP2" tag="span">
+                <template #kwHealth>
+                  <SeoKeywordLink keyword="healthAia" :to="seoLinks.healthAia" />
+                </template>
+                <template #kwHospitals>
+                  <SeoKeywordLink keyword="topHospitals" :to="seoLinks.hospitalPartners" />
+                </template>
+              </i18n-t>
+            </p>
+          </div>
+          <div>
+            <h2 id="home-aia-udon-service" class="heading-section mb-4 text-[var(--color-aia-red)]">
+              <i18n-t keypath="homeContent.udonTitle" tag="span">
+                <template #kwAiaUdon>
+                  <SeoKeywordLink keyword="aiaUdon" :to="seoLinks.agentUdon" />
+                </template>
+              </i18n-t>
+            </h2>
+            <p class="leading-relaxed text-slate-700">
+              <i18n-t keypath="homeContent.udonP1" tag="span">
+                <template #kwProvince>
+                  <SeoKeywordLink keyword="udonProvince" :to="seoLinks.agentUdon" />
+                </template>
+                <template #kwAgent>
+                  <SeoKeywordLink keyword="agentAiaUdon" :to="seoLinks.agentUdon" />
+                </template>
+              </i18n-t>
+            </p>
+            <p class="mt-4 leading-relaxed text-slate-700">
+              <i18n-t keypath="homeContent.udonP2" tag="span">
+                <template #kwAiaUdon>
+                  <SeoKeywordLink keyword="aiaUdon" :to="seoLinks.agentUdon" />
+                </template>
+                <template #kwClaims>
+                  <SeoKeywordLink keyword="claims" :to="seoLinks.claimsGuide" />
+                </template>
+              </i18n-t>
+            </p>
+          </div>
+          <div>
+            <h2 id="home-plan-health" class="heading-section mb-4 text-[var(--color-aia-red)]">
+              <i18n-t keypath="homeContent.planTitle" tag="span">
+                <template #kwHealthOnly>
+                  <SeoKeywordLink keyword="healthOnly" :to="seoLinks.healthCoverage" />
+                </template>
+              </i18n-t>
+            </h2>
+            <p class="leading-relaxed text-slate-700">
+              <i18n-t keypath="homeContent.planP1" tag="span">
+                <template #kwHealthOnly>
+                  <SeoKeywordLink keyword="healthOnly" :to="seoLinks.healthCoverage" />
+                </template>
+                <template #kwBenefit>
+                  <SeoKeywordLink keyword="benefitLimit" :to="seoLinks.healthSum" />
+                </template>
+              </i18n-t>
+            </p>
+            <p class="mt-4 leading-relaxed text-slate-700">
+              <i18n-t keypath="homeContent.planP2" tag="span">
+                <template #kwHealth>
+                  <SeoKeywordLink keyword="healthAia" :to="seoLinks.healthAia" />
+                </template>
+              </i18n-t>
+            </p>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -164,6 +275,62 @@
       </div>
     </section>
 
+    <!-- Trust + closing CTA (SEO footer block) -->
+    <section class="section-pad animate-on-scroll border-t border-slate-200 bg-white">
+      <div class="container-narrow">
+        <h2 class="heading-section mb-4 text-center text-[var(--color-aia-red)]">
+          <i18n-t keypath="homeContent.trustTitle" tag="span">
+            <template #kwHealth>
+              <SeoKeywordLink keyword="healthAia" :to="seoLinks.healthAia" />
+            </template>
+            <template #kwLife>
+              <SeoKeywordLink keyword="life" :to="seoLinks.services" />
+            </template>
+            <template #kwProvince>
+              <SeoKeywordLink keyword="udonProvince" :to="seoLinks.agentUdon" />
+            </template>
+          </i18n-t>
+        </h2>
+        <p class="mx-auto max-w-2xl text-center leading-relaxed text-slate-700">
+          <i18n-t keypath="homeContent.trustShort" tag="span">
+            <template #kwHealth>
+              <SeoKeywordLink keyword="healthAia" :to="seoLinks.healthAia" />
+            </template>
+            <template #kwLife>
+              <SeoKeywordLink keyword="life" :to="seoLinks.services" />
+            </template>
+            <template #kwAiaUdon>
+              <SeoKeywordLink keyword="aiaUdon" :to="seoLinks.agentUdon" />
+            </template>
+          </i18n-t>
+        </p>
+        <p class="mx-auto mt-4 max-w-2xl text-center leading-relaxed text-slate-600">
+          <i18n-t keypath="homeContent.trustInternal" tag="span">
+            <template #kwHealth>
+              <SeoKeywordLink keyword="healthAia" :to="seoLinks.healthAia" />
+            </template>
+            <template #kwAiaUdon>
+              <SeoKeywordLink keyword="aiaUdon" :to="seoLinks.agentUdon" />
+            </template>
+            <template #kwProvince>
+              <SeoKeywordLink keyword="udonProvince" :to="seoLinks.agentUdon" />
+            </template>
+            <template #kwContact>
+              <SeoKeywordLink keyword="contactUs" :to="seoLinks.contact" />
+            </template>
+          </i18n-t>
+        </p>
+        <div class="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
+          <NuxtLink :to="localePath('/contact')" class="btn-primary inline-flex justify-center">
+            {{ t('homeContent.trustCta') }}
+          </NuxtLink>
+          <NuxtLink :to="localePath('/contact')" class="btn-secondary inline-flex justify-center">
+            {{ t('homeContent.trustCtaSecondary') }}
+          </NuxtLink>
+        </div>
+      </div>
+    </section>
+
     <!-- FAQ -->
     <section class="section-pad bg-white animate-on-scroll">
       <div class="container-narrow max-w-2xl">
@@ -195,6 +362,18 @@ import logoAia from '~/assets/img/logoaianobg.png'
 const { t } = useI18n()
 const localePath = useLocalePath()
 
+/** Internal targets for home keyword links (locale prefix added by SeoKeywordLink) */
+const seoLinks = {
+  healthAia: '/articles/aia-health-good-2026',
+  agentUdon: '/articles/agent-udon-free-consult',
+  healthCoverage: '/articles/health-coverage-what',
+  hospitalPartners: '/articles/hospital-aia-kk-korat',
+  claimsGuide: '/articles/claim-nongkhai-buengkan',
+  healthSum: '/articles/health-sum',
+  services: '/services',
+  contact: '/contact',
+} as const
+
 const solutionItems = computed(() => [
   t('solution.item1'),
   t('solution.item2'),
@@ -208,9 +387,13 @@ const reviews = computed(() => [
   t('socialProof.review3')
 ])
 
+useSeo({
+  title: () => t('seo.homeTitle'),
+  description: () => t('seo.homeDescription'),
+})
+
 useHead({
-  title: 'ตัวแทนประกันชีวิต ประกันสุขภาพ AIA อุดรธานี - ขอนแก่น',
-  titleTemplate: '%s'
+  titleTemplate: '%s',
 })
 
 </script>

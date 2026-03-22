@@ -3,8 +3,8 @@
  * Targets: อุดรธานี ขอนแก่น หนองคาย หนองบัว เลย สกลนคร ภาคอีสาน ลาว
  */
 export function useSeo(options: {
-  title?: string
-  description?: string
+  title?: string | (() => string)
+  description?: string | (() => string)
   image?: string
   path?: string
   noIndex?: boolean
@@ -14,10 +14,13 @@ export function useSeo(options: {
   const route = useRoute()
   const path = options.path ?? route.path
   const baseUrl = (config as { siteUrl?: string }).siteUrl || ''
-  const siteName = (config as { siteName?: string }).siteName || 'พรปวีณ์ ศรีพิมพ์สอ ตัวแทน AIA'
 
-  const title = options.title ?? t('seo.defaultTitle')
-  const description = options.description ?? t('seo.defaultDescription')
+  const getTitle = () =>
+    typeof options.title === 'function' ? options.title() : options.title ?? t('seo.defaultTitle')
+  const getDescription = () =>
+    typeof options.description === 'function'
+      ? options.description()
+      : options.description ?? t('seo.defaultDescription')
   const canonical = baseUrl ? `${baseUrl}${path}` : ''
   const ogImage = options.image ?? (baseUrl ? `${baseUrl}/og-image.png` : '')
 
@@ -32,7 +35,7 @@ export function useSeo(options: {
     : []
 
   useHead({
-    title: () => title,
+    title: () => getTitle(),
     htmlAttrs: { lang: locale === 'th' ? 'th' : locale === 'lo' ? 'lo' : 'en' },
     link: [
       ...(canonical ? [{ rel: 'canonical', href: canonical }] : []),
@@ -44,15 +47,15 @@ export function useSeo(options: {
   })
 
   useSeoMeta({
-    description: () => description,
-    ogTitle: () => title,
-    ogDescription: () => description,
+    description: () => getDescription(),
+    ogTitle: () => getTitle(),
+    ogDescription: () => getDescription(),
     ogImage: () => (ogImage ? [ogImage] : []),
     ogUrl: () => canonical || undefined,
     ogLocale: () => (locale === 'th' ? 'th_TH' : locale === 'lo' ? 'lo_LA' : 'en_US'),
     twitterCard: 'summary_large_image',
-    twitterTitle: () => title,
-    twitterDescription: () => description,
+    twitterTitle: () => getTitle(),
+    twitterDescription: () => getDescription(),
     twitterImage: () => ogImage || undefined,
   })
 
@@ -70,11 +73,10 @@ export function useSeo(options: {
     'ประเทศไทย',
     'ลาว',
   ]
-  const jsonLd = {
+  const jsonLdBase = {
     '@context': 'https://schema.org',
     '@type': 'InsuranceAgency',
     name: 'พรปวีณ์ ศรีพิมพ์สอ ตัวแทนประกัน AIA อุดรธานี',
-    description: description,
     url: baseUrl || canonical,
     image: ogImage || undefined,
     priceRange: '฿฿',
@@ -82,10 +84,12 @@ export function useSeo(options: {
     knowsAbout: [
       'ประกันชีวิต',
       'ประกันสุขภาพ',
+      'ประกันสุขภาพ AIA',
       'ประกันอุบัติเหตุ',
       'วางแผนการเงิน',
       'ลดหย่อนภาษี',
       'AIA',
+      'ตัวแทน AIA อุดรธานี',
     ],
     areaServed: areaServed.map((name) => ({ '@type': 'Place', name })),
     address: {
@@ -105,7 +109,11 @@ export function useSeo(options: {
     script: [
       {
         type: 'application/ld+json',
-        children: () => JSON.stringify(jsonLd),
+        children: () =>
+          JSON.stringify({
+            ...jsonLdBase,
+            description: getDescription(),
+          }),
       },
     ],
   })

@@ -20,9 +20,41 @@
     "switchToDark": "Switch to dark mode"
   },
   "hero": {
-    "headline": "Insurance plans that fit your life — not oversold",
-    "subheadline": "Free quote in minutes with straightforward advice",
-    "cta": "Get Free Quote"
+    "headline": "{kwHealth} in one place — {kwHeroAdvisor} with you at every step",
+    "subheadline": "Plan health and life with confidence: tailored {kwPlan} including {kwMedical}, with professional local support in {kwProvince}.",
+    "cta": "Free consultation",
+    "ctaSecondary": "Find a plan that fits you"
+  },
+  "homeContent": {
+    "kw": {
+      "healthAia": "AIA health insurance",
+      "heroAdvisor": "a Udon Thani AIA advisor",
+      "aiaUdon": "AIA Udon Thani",
+      "agentAiaUdon": "a local AIA advisor in Udon Thani",
+      "healthOnly": "health insurance",
+      "life": "life insurance",
+      "topHospitals": "leading hospitals",
+      "claims": "claims",
+      "benefitLimit": "treatment benefit limits",
+      "plan": "insurance plan",
+      "medicalCosts": "medical treatment costs",
+      "udonProvince": "Udon Thani",
+      "contactUs": "contact us"
+    },
+    "whyTitle": "Why choose {kwHealth}",
+    "whyP1": "{kwHealth} is a popular choice in Thailand thanks to broad coverage and flexible plans for employees, business owners, and freelancers alike.",
+    "whyP2": "{kwHealth} can ease treatment costs — room, surgery, and care at {kwHospitals} — including serious illness you may not expect.",
+    "udonTitle": "{kwAiaUdon} — more than selling a policy",
+    "udonP1": "If you live in {kwProvince}, working with {kwAgent} makes planning easier, with personal advice that reflects real needs in the area.",
+    "udonP2": "Our {kwAiaUdon} team supports you from choosing a plan through {kwClaims}, so you have professional help at every step.",
+    "planTitle": "Plan {kwHealthOnly} that fits you",
+    "planP1": "Don’t look only at premium price — consider long-term coverage: {kwBenefit}, illness scope, and premiums you can pay steadily.",
+    "planP2": "{kwHealth} can adapt as your life changes, whether you’re starting your career or planning a family.",
+    "trustTitle": "{kwHealth} and {kwLife} advisor in {kwProvince}",
+    "trustShort": "Expert guidance on {kwHealth} and {kwLife} with free consultation from the {kwAiaUdon} team that understands you.",
+    "trustInternal": "Looking for {kwHealth} that fits you, or advice from an AIA expert in {kwProvince}? You can {kwContact} for a free, no-obligation consultation.",
+    "trustCta": "Contact us",
+    "trustCtaSecondary": "Get free advice today"
   },
   "pain": {
     "title": "Why do so many end up paying a fortune without warning?",
@@ -110,7 +142,9 @@
   },
   "seo": {
     "defaultTitle": "AIA Insurance Advisor Udon Thani | Life & Health Insurance Northeast Thailand",
-    "defaultDescription": "AIA Insurance Advisor in Udon Thani and Northeast Thailand: Khon Kaen, Nong Khai, Nong Bua, Loei, Sakon Nakhon, Bueng Kan. Free quote, no overselling. Pornpavee Sripimso."
+    "defaultDescription": "AIA Insurance Advisor in Udon Thani and Northeast Thailand: Khon Kaen, Nong Khai, Nong Bua, Loei, Sakon Nakhon, Bueng Kan. Free quote, no overselling. Pornpavee Sripimso.",
+    "homeTitle": "AIA health insurance | Udon Thani AIA advisor — free consult | Pornpavee Sripimso",
+    "homeDescription": "AIA health insurance with local Udon Thani support: plan selection and claims help, free consultation, life and health planning across Northeast Thailand (Khon Kaen, Nong Khai). Pornpavee Sripimso."
   },
   "area": {
     "navLabel": "Service areas",
@@ -529,6 +563,25 @@
       "s6Body": "Health insurance helps reduce the risk of large unexpected bills, stabilizes financial planning and improves access to quality care. Serious illnesses can cost hundreds of thousands or millions of baht, so insurance acts as financial protection.",
       "s7Title": "Summary",
       "s7Body": "AIA health insurance is a strong option thanks to sum-insured coverage, flexible plans and wellness support like AIA Vitality. Still, choose based on your own needs and read policy details carefully before deciding. Learn more at https://udonaia.com."
+    },
+    "aiaNewHealthStandard": {
+      "title": "What is the new AIA health insurance (New Health Standard)? A simple guide before you buy",
+      "metaDesc": "New Health Standard and AIA health insurance explained: 13 benefit categories, simple diseases, clearer policy rules. Compare plans with an AIA advisor in Udon Thani — free consult at udonaia.com, Northeast Thailand.",
+      "coverImage": "https://i.ibb.co/KjL2mQtn/Gemini-Generated-Image-q43xozq43xozq43x.png",
+      "s1Title": "The new standard and choosing an AIA health plan",
+      "s1Body": "",
+      "s2Title": "What is New Health Standard?",
+      "s2Body": "",
+      "s3Title": "Highlights (1–2): 13 categories and today’s treatment costs",
+      "s3Body": "",
+      "s4Title": "Simple diseases and clearer contract rules",
+      "s4Body": "",
+      "s5Title": "Examples of AIA health plans under the new standard",
+      "s5Body": "",
+      "s6Title": "Why consult AIA Udon Thani before choosing",
+      "s6Body": "",
+      "s7Title": "Summary and next steps",
+      "s7Body": ""
     },
     "elderlyHealthLaosAia": {
       "title": "Elderly health insurance and can Lao nationals buy insurance in Thailand?",
