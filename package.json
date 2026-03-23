@@ -9,6 +9,7 @@
     "preview": "nuxt preview"
   },
   "dependencies": {
+    "@vercel/speed-insights": "^2.0.0",
     "nuxt": "^3.14.0",
     "vue": "latest",
     "vue-router": "latest"
