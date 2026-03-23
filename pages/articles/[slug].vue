@@ -62,6 +62,8 @@
 <script setup lang="ts">
 import { aiaNewHealthStandardBodies } from '~/content/articleBodies/aiaNewHealthStandard'
 import { aiaCompanyHistoryAsiaBodies } from '~/content/articleBodies/aiaCompanyHistoryAsia'
+import { aiaHealthWorth2026Bodies } from '~/content/articleBodies/aiaHealthWorth2026'
+import { whyUdonPrefersAia2026Bodies } from '~/content/articleBodies/whyUdonPrefersAia2026'
 
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
@@ -93,13 +95,20 @@ const articleKey = computed(() => {
     'health-coverage-what': 'healthCoverageWhat',
     'choose-insurance-not-scammed': 'chooseInsuranceNotScammed',
     'aia-new-health-standard': 'aiaNewHealthStandard',
-    'aia-company-history-asia': 'aiaCompanyHistoryAsia'
+    'aia-company-history-asia': 'aiaCompanyHistoryAsia',
+    'aia-health-worth-2026': 'aiaHealthWorth2026',
+    'why-udon-prefers-aia-2026': 'whyUdonPrefersAia2026'
   }
   return map[slug.value] || ''
 })
 
 /** บทความที่ sNBody เป็น HTML (b, u, ลิงก์ภายใน) — แปลง href ด้วย localePath */
-const articleKeysWithRichHtmlBody = new Set(['aiaNewHealthStandard', 'aiaCompanyHistoryAsia'])
+const articleKeysWithRichHtmlBody = new Set([
+  'aiaNewHealthStandard',
+  'aiaCompanyHistoryAsia',
+  'aiaHealthWorth2026',
+  'whyUdonPrefersAia2026'
+])
 
 const hasRichArticleBody = computed(
   () => articleKey.value && articleKeysWithRichHtmlBody.has(articleKey.value)
@@ -120,6 +129,18 @@ function localizedArticleSectionBody(sectionIndex: number) {
     raw =
       aiaCompanyHistoryAsiaBodies[loc][sectionIndex] ??
       aiaCompanyHistoryAsiaBodies.th[sectionIndex] ??
+      ''
+  } else if (key === 'aiaHealthWorth2026') {
+    const loc = locale.value === 'en' ? 'en' : locale.value === 'lo' ? 'lo' : 'th'
+    raw =
+      aiaHealthWorth2026Bodies[loc][sectionIndex] ??
+      aiaHealthWorth2026Bodies.th[sectionIndex] ??
+      ''
+  } else if (key === 'whyUdonPrefersAia2026') {
+    const loc = locale.value === 'en' ? 'en' : locale.value === 'lo' ? 'lo' : 'th'
+    raw =
+      whyUdonPrefersAia2026Bodies[loc][sectionIndex] ??
+      whyUdonPrefersAia2026Bodies.th[sectionIndex] ??
       ''
   } else {
     raw = t(`articles.${key}.s${sectionIndex}Body`)
