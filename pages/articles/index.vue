@@ -101,6 +101,8 @@ const articleList: { slug: string; key: string; addedAt: string }[] = [
   { slug: 'aia-company-history-asia', key: 'aiaCompanyHistoryAsia', addedAt: '2026-03-22' },
   { slug: 'aia-health-worth-2026', key: 'aiaHealthWorth2026', addedAt: '2026-03-23' },
   { slug: 'why-udon-prefers-aia-2026', key: 'whyUdonPrefersAia2026', addedAt: '2026-03-23' },
+  { slug: 'aia-udon-advisor-trust-2026', key: 'aiaUdonAdvisorTrust2026', addedAt: '2026-03-31' },
+  { slug: 'how-to-choose-aia-health-plan', key: 'howToChooseAiaHealthPlan', addedAt: '2026-03-31' },
   { slug: 'aia-lump-sum-guide', key: 'aiaLumpSumGuide', addedAt: '2026-03-19' },
   { slug: 'aia-health-good-2026', key: 'aiaHealthGood2026', addedAt: '2026-03-19' },
   { slug: 'choose-insurance-not-scammed', key: 'chooseInsuranceNotScammed', addedAt: '2026-03-11' },

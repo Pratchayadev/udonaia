@@ -64,6 +64,8 @@ import { aiaNewHealthStandardBodies } from '~/content/articleBodies/aiaNewHealth
 import { aiaCompanyHistoryAsiaBodies } from '~/content/articleBodies/aiaCompanyHistoryAsia'
 import { aiaHealthWorth2026Bodies } from '~/content/articleBodies/aiaHealthWorth2026'
 import { whyUdonPrefersAia2026Bodies } from '~/content/articleBodies/whyUdonPrefersAia2026'
+import { aiaUdonAdvisorTrust2026Bodies } from '~/content/articleBodies/aiaUdonAdvisorTrust2026'
+import { howToChooseAiaHealthPlanBodies } from '~/content/articleBodies/howToChooseAiaHealthPlan'
 
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
@@ -97,7 +99,9 @@ const articleKey = computed(() => {
     'aia-new-health-standard': 'aiaNewHealthStandard',
     'aia-company-history-asia': 'aiaCompanyHistoryAsia',
     'aia-health-worth-2026': 'aiaHealthWorth2026',
-    'why-udon-prefers-aia-2026': 'whyUdonPrefersAia2026'
+    'why-udon-prefers-aia-2026': 'whyUdonPrefersAia2026',
+    'aia-udon-advisor-trust-2026': 'aiaUdonAdvisorTrust2026',
+    'how-to-choose-aia-health-plan': 'howToChooseAiaHealthPlan'
   }
   return map[slug.value] || ''
 })
@@ -107,7 +111,9 @@ const articleKeysWithRichHtmlBody = new Set([
   'aiaNewHealthStandard',
   'aiaCompanyHistoryAsia',
   'aiaHealthWorth2026',
-  'whyUdonPrefersAia2026'
+  'whyUdonPrefersAia2026',
+  'aiaUdonAdvisorTrust2026',
+  'howToChooseAiaHealthPlan'
 ])
 
 const hasRichArticleBody = computed(
@@ -141,6 +147,18 @@ function localizedArticleSectionBody(sectionIndex: number) {
     raw =
       whyUdonPrefersAia2026Bodies[loc][sectionIndex] ??
       whyUdonPrefersAia2026Bodies.th[sectionIndex] ??
+      ''
+  } else if (key === 'aiaUdonAdvisorTrust2026') {
+    const loc = locale.value === 'en' ? 'en' : locale.value === 'lo' ? 'lo' : 'th'
+    raw =
+      aiaUdonAdvisorTrust2026Bodies[loc][sectionIndex] ??
+      aiaUdonAdvisorTrust2026Bodies.th[sectionIndex] ??
+      ''
+  } else if (key === 'howToChooseAiaHealthPlan') {
+    const loc = locale.value === 'en' ? 'en' : locale.value === 'lo' ? 'lo' : 'th'
+    raw =
+      howToChooseAiaHealthPlanBodies[loc][sectionIndex] ??
+      howToChooseAiaHealthPlanBodies.th[sectionIndex] ??
       ''
   } else {
     raw = t(`articles.${key}.s${sectionIndex}Body`)

@@ -35,6 +35,8 @@ export default defineEventHandler((event) => {
     '/articles/aia-company-history-asia',
     '/articles/aia-health-worth-2026',
     '/articles/why-udon-prefers-aia-2026',
+    '/articles/aia-udon-advisor-trust-2026',
+    '/articles/how-to-choose-aia-health-plan',
     '/contact',
     '/portfolio',
     '/area/udon-thani',
