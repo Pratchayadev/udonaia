@@ -37,6 +37,7 @@ export default defineEventHandler((event) => {
     '/articles/why-udon-prefers-aia-2026',
     '/articles/aia-udon-advisor-trust-2026',
     '/articles/how-to-choose-aia-health-plan',
+    '/articles/hospital-costs-rising-thailand',
     '/contact',
     '/portfolio',
     '/area/udon-thani',

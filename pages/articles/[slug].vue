@@ -66,6 +66,7 @@ import { aiaHealthWorth2026Bodies } from '~/content/articleBodies/aiaHealthWorth
 import { whyUdonPrefersAia2026Bodies } from '~/content/articleBodies/whyUdonPrefersAia2026'
 import { aiaUdonAdvisorTrust2026Bodies } from '~/content/articleBodies/aiaUdonAdvisorTrust2026'
 import { howToChooseAiaHealthPlanBodies } from '~/content/articleBodies/howToChooseAiaHealthPlan'
+import { hospitalCostsRisingThailandBodies } from '~/content/articleBodies/hospitalCostsRisingThailand'
 
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
@@ -101,7 +102,8 @@ const articleKey = computed(() => {
     'aia-health-worth-2026': 'aiaHealthWorth2026',
     'why-udon-prefers-aia-2026': 'whyUdonPrefersAia2026',
     'aia-udon-advisor-trust-2026': 'aiaUdonAdvisorTrust2026',
-    'how-to-choose-aia-health-plan': 'howToChooseAiaHealthPlan'
+    'how-to-choose-aia-health-plan': 'howToChooseAiaHealthPlan',
+    'hospital-costs-rising-thailand': 'hospitalCostsRisingThailand'
   }
   return map[slug.value] || ''
 })
@@ -113,7 +115,8 @@ const articleKeysWithRichHtmlBody = new Set([
   'aiaHealthWorth2026',
   'whyUdonPrefersAia2026',
   'aiaUdonAdvisorTrust2026',
-  'howToChooseAiaHealthPlan'
+  'howToChooseAiaHealthPlan',
+  'hospitalCostsRisingThailand'
 ])
 
 const hasRichArticleBody = computed(
@@ -159,6 +162,12 @@ function localizedArticleSectionBody(sectionIndex: number) {
     raw =
       howToChooseAiaHealthPlanBodies[loc][sectionIndex] ??
       howToChooseAiaHealthPlanBodies.th[sectionIndex] ??
+      ''
+  } else if (key === 'hospitalCostsRisingThailand') {
+    const loc = locale.value === 'en' ? 'en' : locale.value === 'lo' ? 'lo' : 'th'
+    raw =
+      hospitalCostsRisingThailandBodies[loc][sectionIndex] ??
+      hospitalCostsRisingThailandBodies.th[sectionIndex] ??
       ''
   } else {
     raw = t(`articles.${key}.s${sectionIndex}Body`)
